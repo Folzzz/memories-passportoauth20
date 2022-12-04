@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEMORIES APP</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootswatch -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/darkly/bootstrap.min.css" integrity="sha384-nNK9n28pDUDDgIiIqZ/MiyO3F4/9vsMtReZK39klb/MtkZI3/LtjSjlmyVPS3KdN" crossorigin="anonymous">
+    <!--Materializecss Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    {{!-- custom css --}}
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+    {{> _header}}
+    {{> _add_btn}}
+    <div class="container mt-4">
+        {{{body}}}
+    </div>
+    
+
+
+    <!-- Materializecss Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    {{!-- ck editor --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.20.1/ckeditor.js" integrity="sha512-zFNDGGU5T3I464vTJn5SupfBJEoxFa7oa5BRkQjm409ORBe1U4f7cpbylDdV21yrmjmYKo3Y0sPTxR9kBgSkvQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    {{!-- custom script --}}
+    <script>
+        M.Sidenav.init(document.querySelector('.sidenav'));
+        M.FormSelect.init(document.querySelector('#status'));
+
+        CKEDITOR.replace('body', {
+            plugins: 'wysiwygarea, toolbar, basicstyles, link'
+        });
+    </script>
+</body>
+</html>
